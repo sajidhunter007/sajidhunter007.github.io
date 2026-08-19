@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>হাটবাজার — কেনাবেচার নিজস্ব হাট</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">হাট<span>বাজার</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#tazakhobor">আজকের হাট</a>
+      <a href="#kbivagsomuh">বিভাগ</a>
+      <a href="#kibhabekaj">কীভাবে কাজ করে</a>
+      <a href="#jogajog">যোগাযোগ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="ঝুড়ি দেখুন">
+        🧺 <span class="cart-badge" id="cartCount">0</span>
+      </button>
+      <button class="btn btn-marigold" id="sellBtn">জিনিস বেচুন</button>
+      <button class="hamburger" id="hamburger" aria-label="মেনু খুলুন">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO / SIGNBOARD ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <p class="hero-eyebrow">— পুরনো হাটের নতুন ঠিকানা —</p>
+    <h1 class="hero-title">যা বেচবেন, যা কিনবেন —<br>সব হবে <span class="underline-mark">এক হাটে</span></h1>
+    <p class="hero-sub">পাড়ার হাটের বিশ্বাস, শহরের সুবিধা। ব্যবহৃত জিনিস থেকে হাতে বানানো পণ্য — সরাসরি বিক্রেতার কাছ থেকে কিনুন, দরদাম করুন, নিজের জিনিস বিক্রি করুন বিনামূল্যে।</p>
+
+    <form class="hero-search" id="searchForm" role="search">
+      <input type="text" id="searchInput" placeholder="যেমন: সাইকেল, শাড়ি, মোবাইল, চেয়ার...">
+      <button type="submit">খুঁজুন</button>
+    </form>
+
+    <div class="hero-stats">
+      <div class="stat"><strong>৫২,০০০+</strong><span>বিক্রেতা</span></div>
+      <div class="stat"><strong>৬৪</strong><span>জেলা</span></div>
+      <div class="stat"><strong>০ টাকা</strong><span>লিস্টিং ফি</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORY CHIPS ===== -->
+<section class="categories" id="kbivagsomuh">
+  <div class="wrap">
+    <div class="chip-row" id="chipRow">
+      <button class="chip active" data-cat="all">সবগুলো</button>
+      <button class="chip" data-cat="electronics">ইলেকট্রনিক্স</button>
+      <button class="chip" data-cat="fashion">পোশাক ও ফ্যাশন</button>
+      <button class="chip" data-cat="home">ঘর ও আসবাব</button>
+      <button class="chip" data-cat="vehicle">গাড়ি ও সাইকেল</button>
+      <button class="chip" data-cat="handmade">হাতের কাজ</button>
+      <button class="chip" data-cat="books">বই ও খাতা</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LISTINGS ===== -->
+<section class="listings" id="tazakhobor">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>আজকের হাট<span class="dot">।</span></h2>
+      <p>বিক্রেতারা আজই তুলেছেন এই জিনিসগুলো</p>
+    </div>
+
+    <div class="grid" id="productGrid">
+      <!-- Cards injected by JS from data, but static fallback below for no-JS -->
+    </div>
+
+    <p class="empty-state" id="emptyState" hidden>এই খোঁজে কিছু পাওয়া যায়নি। অন্য শব্দে খুঁজে দেখুন।</p>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="kibhabekaj">
+  <div class="wrap">
+    <div class="section-head light">
+      <h2>কীভাবে কাজ করে</h2>
+      <p>তিনটে ধাপ, কোনো ঝামেলা নেই</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-tag">১</span>
+        <h3>ছবি তুলুন</h3>
+        <p>যা বিক্রি করতে চান তার ২-৩টা ছবি তুলুন, দাম আর এলাকা লিখুন।</p>
+      </div>
+      <div class="step">
+        <span class="step-tag">২</span>
+        <h3>হাটে তুলুন</h3>
+        <p>বিনামূল্যে লিস্টিং দিন — কোনো কমিশন বা লুকানো খরচ নেই।</p>
+      </div>
+      <div class="step">
+        <span class="step-tag">৩</span>
+        <h3>সরাসরি কথা বলুন</h3>
+        <p>ক্রেতা সরাসরি মেসেজ করবেন, দরদাম করে সরাসরি হাতে-হাতে লেনদেন করুন।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SELL CTA BANNER ===== -->
+<section class="sell-cta">
+  <div class="wrap sell-cta-inner">
+    <div>
+      <h2>ঘরে ফেলে রাখা জিনিস?<br>আজই হাটে তুলুন।</h2>
+      <p>যা আর ব্যবহার করেন না, তা কারো কাজে লাগতে পারে — আর আপনার পকেটেও দুটো টাকা আসবে।</p>
+    </div>
+    <button class="btn btn-marigold btn-lg" id="sellBtn2">একটা লিস্টিং দিন — ফ্রি</button>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="jogajog">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="logo footer-logo">হাট<span>বাজার</span></p>
+      <p>পাড়ার হাটের বিশ্বাস নিয়ে, ডিজিটাল উপায়ে।</p>
+    </div>
+    <div class="footer-col">
+      <h4>বিভাগ</h4>
+      <a href="#">ইলেকট্রনিক্স</a>
+      <a href="#">পোশাক ও ফ্যাশন</a>
+      <a href="#">ঘর ও আসবাব</a>
+      <a href="#">গাড়ি ও সাইকেল</a>
+    </div>
+    <div class="footer-col">
+      <h4>সাহায্য</h4>
+      <a href="#">নিরাপদ কেনাবেচা</a>
+      <a href="#">লিস্টিং নিয়ম</a>
+      <a href="#">অভিযোগ জানান</a>
+    </div>
+    <div class="footer-col">
+      <h4>যোগাযোগ</h4>
+      <a href="mailto:[email protected]">[email protected]</a>
+      <a href="tel:16123">১৬১২৩ (সারাদিন খোলা)</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© ২০২৬ হাটবাজার। সব অধিকার সংরক্ষিত।</p>
+</footer>
+
+<!-- ===== SELL MODAL ===== -->
+<div class="modal-overlay" id="sellModal">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="বন্ধ করুন">✕</button>
+    <h3>আপনার জিনিসটা হাটে তুলুন</h3>
+    <form id="sellForm">
+      <label>জিনিসের নাম
+        <input type="text" placeholder="যেমন: স্যামসাং ফ্রিজ, ১৮ কিউবিক ফুট" required>
+      </label>
+      <label>বিভাগ
+        <select required>
+          <option value="">বেছে নিন</option>
+          <option>ইলেকট্রনিক্স</option>
+          <option>পোশাক ও ফ্যাশন</option>
+          <option>ঘর ও আসবাব</option>
+          <option>গাড়ি ও সাইকেল</option>
+          <option>হাতের কাজ</option>
+          <option>বই ও খাতা</option>
+        </select>
+      </label>
+      <label>দাম (টাকা)
+        <input type="number" placeholder="৳" min="0" required>
+      </label>
+      <label>এলাকা
+        <input type="text" placeholder="যেমন: ধানমন্ডি, ঢাকা" required>
+      </label>
+      <button type="submit" class="btn btn-marigold btn-block">লিস্টিং জমা দিন</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
